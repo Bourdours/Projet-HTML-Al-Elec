@@ -1,0 +1,37 @@
+/* ============= */
+/* === Fonts === */
+/* ============= */
+
+/* wallpoet-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Wallpoet';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/wallpoet-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* platypi-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Platypi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/platypi-v6-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* risque-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Risque';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/risque-v24-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+$fontMajor : "Wallpoet";
+
+$fontTittle : "Risque" ;
+
+$fontBody : "Platypi" ;

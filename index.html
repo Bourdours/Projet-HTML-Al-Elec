@@ -5,42 +5,244 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index - Al-Elec</title>
 
-    <!-- === CSS === -->
-    <link rel="stylesheet" href="css/style.css">
     
     <!-- === Font & Icon === -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- === Nivo Slider === -->
+    <link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+    
+    <!-- === Database pour Leaflet === -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <!-- script pour avis google -->
+    <script defer async src='https://cdn.trustindex.io/loader.js?58e576d6015905670696c289990'></script>
 
-
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <div id="catch">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, earum!
+        <p>SARL AL-Elec | 7 rue du Calvaire, 56130 MAZAN |  <em class = "num">06.65.34.27.95  </em> : Pour toutes urgences ou besoin de devis
         </p>
     </div>
+    
     <header id="head">
-        <div id="logo">
-            <img src="Images/Icones/Design sans titre(1).png" alt="logo">
-        </div>
-        <nav id="navMain">
-            <ul>
-                <li><a href="#" class="on">Accueil</a></li>
-                <li><a href="#">Dépannage</a></li>
-                <li><a href="#">Réalisation</a></li>
-                <li><a href="#">Normes</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
-            </ul>
-        </nav>
+            <div id="logo">
+                <img src="Images//Icones/Design_baniere.png" alt="logo">
+                <p>SARL Al-Elec <br> Electricité Générale <br> 06 65 34 27 95</p>
+            </div>
+            
+            <nav id="navMain">
+                <ul>
+                    <li><a href="#" class="on">Accueil</a></li>
+                    <li><a href="#">Dépannage</a></li>
+                    <li><a href="#">Réalisation</a></li>
+                    <li><a href="#">Normes</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><i class="fa-solid fa-bars hiddenDesk"></i></a></li>
+                </ul>
+            </nav>
     </header>
-
+    
     <main id="container">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente velit nam quasi qui aliquam, provident ad, ipsa esse debitis dolores facere tenetur nobis excepturi aut iste vero vel laborum? Iste nemo fugit vitae voluptatibus, recusandae rerum alias nulla enim nostrum accusantium, sapiente omnis nihil hic ut ex commodi incidunt sit voluptate itaque? In, ducimus quasi voluptatum, assumenda aliquam, voluptate consequuntur voluptatibus ea cupiditate error quas numquam ipsa exercitationem iure nostrum inventore magni provident placeat sequi. Nobis repudiandae, neque aliquid similique repellat fugiat magnam, asperiores explicabo soluta labore porro quae, obcaecati distinctio. Minus nam unde minima dignissimos iusto natus obcaecati ad?</div>
+        <section id="sliders">
+            <h1>SARL Al-Elec</h1>
+            <div id="wrapper">
+                <div class="slider-wrapper theme-default">
+                    <div id="slider" class="nivoSlider">
+                        <img src="Images/Photo/Tertiaire/eclairage_bar.jpg" alt="Photo d'éclairage de bar" data-transition="sliceDownRight" title="#htmlcaption1" />
+                        <img src="Images/Photo/Tertiaire/eclairage_cybercafe.jpg" alt="Photo d'eclairage cybercafe" 
+                        data-transition="sliceDownRight" title="#htmlcaption2"  />
+                        <img src="Images/Photo/Tertiaire/restaurant.jpg" alt="Photo de restaurant" data-transition="sliceDownRight"  title="#htmlcaption3" />
+                        <img src="Images/Photo/Tertiaire/securite_centrale_alarme.jpg" data-transition="sliceDownRight" alt="Photo de dntrale d'alarme incendie" title="#htmlcaption4" title="#htmlcaption4"  />
+                    </div>
+                    
+                    <div id="slider2" class="nivoSlider">
+                        <img src="Images/Photo/Domestique/interphonie.jpg" alt="Photo d'interphone" title="#htmlcaption5"  data-transition="sliceUpLeft"/>
+                        <img src="Images/Photo/Domestique/led_sdb.jpg" alt="Photo Salle de Bain" title="#htmlcaption6"  data-transition="sliceUpLeft"/>
+                        <img src="Images/Photo/Domestique/piscine.jpg" alt="Photo de piscine" data-transition="sliceUpLeft"
+                        title="#htmlcaption7"  />
+                        <img src="Images/Photo/Domestique/lustre.jpg" alt="Photo de lustre" title="#htmlcaption8" data-transition="sliceUpDownLeft"/>
+                    </div>
+                    <div id="htmlcaption1" class="nivo-html-caption">
+                        <a href="#">Réalisation de l'éclairage d'un bar</a>. 
+                    </div>
+                    <div id="htmlcaption2" class="nivo-html-caption">
+                        <a href="#">Réalisation du cablement d'un cybercafé</a>. 
+                    </div>
+                    <div id="htmlcaption3" class="nivo-html-caption">
+                        <a href="#">Réalisation des plafonniers d'un restaurant</a>. 
+                    </div>
+                    <div id="htmlcaption4" class="nivo-html-caption">
+                        <a href="#">Instalation d'une centrale d'alarme incendie</a>. 
+                    </div>
+                    <div id="htmlcaption5" class="nivo-html-caption">
+                        <a href="#">Pose & instalation d'interphone</a>. 
+                    </div>
+                    <div id="htmlcaption6" class="nivo-html-caption">
+                        <a href="#">Pose ruban LED dans une salle de bain</a>. 
+                    </div>
+                    <div id="htmlcaption7" class="nivo-html-caption">
+                        <a href="#">Réalisation de l'éclairage extérieur de piscine de particulier</a>. 
+                    </div>
+                    <div id="htmlcaption8" class="nivo-html-caption">
+                        <a href="#">Instalation d'un lustre</a>. 
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+        <section id="summ">
+            <h3>Qui sommes nous ?</h3>
+            <div id="blockPresentation">
+                <img src="Images/Photo/Attal.jpg" alt="Alexendre Attal" class="hiddenMobile">
+                <div id="presentation">
+                    <p>
+                        SARL AL ELEC réalise tous vos travaux d’électricité en neuf, rénovation, dépannage, domotique et interphonie. Sur notre site, vous pouvez consulter les photos de nos réalisations et effectuer vos demandes de devis gratuits en ligne. <br>
+                    </p>
+                    <p>
+                        Notre artisan électricien diplômé, Alexandre Attal, met son expérience à votre service pour vous garantir des interventions rapides, polyvalentes et conformes à vos exigences, que ce soit pour des travaux courants, de la maintenance ou des prestations spécialisées et remise aux normes. Nous sélectionnons un matériel de qualité, adapté à vos besoins et à votre budget.
+                    </p>
+                    <p>
+                        Installés à Marzan, nous intervenons dans le Morbihan (56), la Loire-Atlantique (44) et l’Ille-et-Vilaine (35). Pour toute demande d’information ou de devis, contactez-nous au 06 65 34 27 95 ou par mail à attal.alex@gmail.com.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="allSkills">
+            <h4>Une envie particulière, nous avons les compétences :
+            </h4>
+            <div id="skill">
+                <div class="skills">
+                    <img src="Images/Icones/cable.png" alt="Icone cable">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/chauffage.png" alt="Icone Chauffage">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/depannage.png" alt="Icone dépannage">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/domotique.png" alt="Icone domotique">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/feu-electrique.png" alt="Icone feu electrique">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/interphone.png" alt="Icone interphone">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/navigateur.png" alt="Icone navigateur">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/panneau-electrique.png" alt="Icone panneau electrique">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/plafonnier.png" alt="Icone plafonnier">
+                </div>
+                <div class="skills">
+                    <img src="Images/Icones/pompe.png" alt="Icone pompe chargement">
+                </div>
+            </div>
+        </section>
+
+        <section id="googleReview">
+            <div src="https://cdn.trustindex.io/loader.js?58e576d6015905670696c289990"></div>
+        </section>
+
+        <article id="contact">
+            <div>
+                <h5></h5>
+                <img src="" alt="">
+            </div>
+            <div>
+                <h5>Test</h5>
+                <img src="" alt="">
+            </div>
+        </article>
+        lorem1800
     </main>
 
     <footer id="foot">
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sapiente, fugiat rerum ratione esse error natus dolore ipsa. Placeat minus iste similique rerum id nesciunt atque, odit quia perspiciatis non, magni accusamus veritatis nihil modi fugiat! Impedit fugit incidunt culpa optio dolorem, quaerat omnis, earum a voluptatum veritatis beatae ipsum sed sapiente facere magnam non in ipsa? Iste, molestiae aperiam. Quo harum deleniti quae, laudantium quisquam cupiditate quibusdam eos dolorem beatae excepturi necessitatibus maiores mollitia. Ex, eos veniam. Fugiat nam ab officiis recusandae harum dolorem eligendi repellendus laudantium ratione, voluptatum ut sint, corporis esse expedita magnam optio blanditiis modi. Delectus!</div>
+        
+        <div id="blockFoot">
+            <div id="enterprise">
+                <img src="Images/Icones/Design_baniere.png" alt="Logo">
+                <h6> SARL Al-Elec <br> 
+                    Electricité Générale <br> 
+                    <span class="siret">siret : 915 245 070 00015
+                    </span>
+                </h6>
+            </div>
+            <div id="infos">
+                <h6>Informations</h6>
+                <p>
+                    7, avenue du Calvaire, 56130 MARZAN <br>
+                    <span class="numFooter"> 06 65 34 27 95</span> <br>
+                    attal.alex@gmail.com
+                </p>
+            </div>
+            <div id="map">
+                <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-2.351760864257813%2C47.48635299289373%2C-2.2904777526855473%2C47.59180955803043&amp;layer=mapnik&amp;marker=47.53910778958013%2C-2.3212051391601562" style="border: 1px solid black"></iframe>
+            </div>
+        </div>
+
+        <div id="legals">
+            <p>
+                <a href="#"> Mentions légales</a> |
+                <a href="#">Plan du site</a> |
+                <a href="#">Lien utiles</a>
+            </p>
+        </div>
+        <div id="remontada">
+            <a href="#">
+                <i class="fa-solid fa-angles-up fa-beat"></i>
+            </a>
+        </div>
     </footer>
+
+
+    <!-- === script pour la map leaflet === -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    </script>
+    <script>
+    var map = L.map('map').setView([47.538912721943134, -2.3212271067211763], 12);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    </script>
+    <!-- === scrpit pour nino slider === -->
+    <script type="text/javascript" src="scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    $(window).load(function() {
+        $('#slider2').nivoSlider();
+    });
+    </script>
+
 </body>
 </html>

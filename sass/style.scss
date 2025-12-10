@@ -1,55 +1,29 @@
 /* ================= */
 /* === Variables === */
 /* ================= */
-
-:root {
-    --fontTitre :'Wallpoet';
-    --couleur1 : #00dbd7 ;
-    --couleur2 : #390bde ;
-    --couleur3 :#BCA414 ;
-}
-
-
-
-
-
-
-
-/* ============= */
-/* === Fonts === */
-/* ============= */
-
-/* wallpoet-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Wallpoet';
-  font-style: normal;
-  font-weight: 400;
-  src: url('Fonts/wallpoet-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* platypi-regular - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Platypi';
-  font-style: normal;
-  font-weight: 400;
-  src: url('Fonts/platypi-v6-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
+@use "color" ;
+@use "fonts" ;
+@use "mixin" ;
 
 
 /* ================== */
 /* === Généralité === */
 /* ================== */
 *{
-    margin: 0;  /* RaZ html */
+    margin: 0;  /* Reset html */
     padding: 0;
+    box-sizing: border-box;
+
 }
 
+
 body{
-    background: linear-gradient(to bottom, var(--couleur1) 30%, var(--couleur2) 100%);
-    background-repeat: no-repeat;
-    font-family: 'Platypi';
+    background-color: color.$colorBody ;
+    color: color.$colorMain;
+    text-shadow: 1px 1px black;
+    font-family: fonts.$fontBody;
+    height: 100%;
+    width: 100%;
 }
 
 ul{
@@ -60,40 +34,400 @@ a{
     text-decoration: none;
 }
 
-/* ============= */
+/* ======||===== */
 /* === Index === */
-/* ============= */
+/* ======||===== */
 
 /* === Header === */
 
+#catch {
+    display: flex;
+    position: fixed;
+    right: 10%;
+    align-items: right;
+    justify-content: end;
+    text-shadow: 1px 1px black;
+    z-index: 100;
+
+
+    p{
+        border-radius:0 0 12px 12px ;
+        -webkit-border-radius:0 0 12px 12px ;
+        -moz-border-radius:0 0 12px 12px ;
+        -ms-border-radius:0 0 12px 12px ;
+        -o-border-radius:0 0 12px 12px ;
+        justify-content: end;
+        align-items: start;
+        background-color: color.$colorCatchBack;
+        display: flex;
+        padding: 4px 8px;
+        margin: 0 24px 0 0px;
+        .num{
+            color: white;
+            padding-right: 4px;
+            &:hover{
+                text-shadow: 0 0 20px color.$colorMainHover;
+            }
+        }
+}
+}
+
+
 #head {
     display: flex;
-    font-family: var(--fontTitre);
+    font-family: fonts.$fontTittle;
+    background-color: color.$colorBanner;
+    text-shadow: 1px 1px black;
+    padding: 24px 0 24px 0 ;
+    justify-content: space-evenly;
+    border-radius: 0 0 24px 24px;
+    -webkit-border-radius: 0 0 24px 24px;
+    -moz-border-radius: 0 0 24px 24px;
+    -ms-border-radius: 0 0 24px 24px;
+    -o-border-radius: 0 0 24px 24px;
+    width: 100%;
+    ul{
+       display: flex;
+       justify-content: space-around;
+       align-items: end;
+       gap: 2rem;
+       .hiddenDesk{
+        display: none;
+       }
+       a{
+        color: white;
+       }
+    }
 }
-#logo img {
-    max-width: 64px;
-    max-height: 64px;
-}
-#head ul{
+
+#logo {
+    width: 15%;
     display: flex;
-    justify-content: space-between;
+    font-family: fonts.$fontMajor;
+    font-size: 1.8rem;
+    margin-left: 10%;
+    img {
+        border: 1px solid color.$colorMainHover;
+        max-width: 192px;
+        max-height: 192px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+        margin-right: 16px;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#navMain{
+    width: 65%;
+    margin-right: 10%;
+    font-size: 2rem;
+    align-items: end;
+    justify-content: end;
+    display: flex;
+    .on{
+        font-size: 3rem;
+        text-decoration: underline;
+    }
+}
+
+/* ============= */
+/* === Main ==== */
+/* ============= */
+
+#container{
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 1600px;
+    width: 100%;
+}
+
+/* === Slider === */
+
+#sliders{
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    h1{
+        font-size: 3rem;
+        font-family: fonts.$fontMajor;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+    slider1, slider2{
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+    }
+    
+    #wrapper{
+        height: 480px;
+        overflow: hidden;
+        min-width: 100% ;
+        .slider-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 50%;
+            .nivoSlider{
+                border: 1px solid color.$colorMain;
+                border-radius: 24px;
+                -webkit-border-radius: 24px;
+                -moz-border-radius: 24px;
+                -ms-border-radius: 24px;
+                -o-border-radius: 24px;
+                img{
+                    min-height: 480px;
+                    max-height: 480px;
+                }
+            }
+        }
+    }
+}
+
+/* === Presentation === */
+
+#summ{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
+    h3{
+        margin-bottom: 16px;
+        font-family: fonts.$fontTittle;
+        font-size: 3rem;
+    }
+    
 }
-#head ul a {
+
+#blockPresentation{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+
+    img{
+        height: 480px;
+        width: 640px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+}
+
+}
+
+#presentation{
+    background-color: color.$colorBack;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    max-height: 480px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    p{
+        color: white;
+        text-shadow: 1px 1px black;
+        font-size: 1.4rem;
+        text-justify: auto;
+        text-indent: 8%;
+        line-height: auto;
+        margin: 8px;
+    }
+}
+
+/* === Google Avis === */
+
+#googleReview{
+    margin-top: 16px;
+    padding-top: 16px;
+}
+
+/* === Allskills === */
+
+#allSkills{
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    h4{
+        font-size: 3rem;
+        font-family: fonts.$fontTittle;
+        margin-bottom: 16px;
+    }
+    #skill{
+        display: flex;
+        .skills{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            img{
+                border: 1px solid color.$colorMain;
+                background-color: color.$colorBack;
+                padding: 8px;
+                border-radius: 16px;
+                height: 64px;
+                width: 64px;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                -ms-border-radius: 16px;
+                -o-border-radius: 16px;
+                &:hover{
+                    background-color: color.$colorMainHover;
+                    box-shadow: 0 0 20px 2px color.$colorMainHover;
+                }
+}
+
+        }
+    }
+}
+
+/* === Contact === */
+
+/* ============= */
+/* === Footer == */
+/* ============= */
+
+#foot {
+    font-family: fonts.$fontBody;
+    background-color: color.$colorBanner;
+    text-shadow: 1px 1px black;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#blockFoot{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 8px;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+#enterprise{
+    display: flex;
+    width: 33%;
+    align-items: center;
+    justify-content: center;
+
+    h6{
+        font-family: fonts.$fontMajor;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+        font-size: 1.5rem;
+        .siret{
+            font-size: 0.7rem;
+        }
+    }
+
+    img{
+        box-sizing: border-box;
+        border: 1px solid color.$colorMainHover;
+        width: 192px;
+        height: 192px;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+}
+}
+
+#infos{
+    width: 33%;
+    text-align: center;
+    font-size: 1.5rem;
+    h6{
+        font-size: 2rem;
+        font-family: fonts.$fontTittle;
+    }
+    p{
+        color: white;
+        .numFooter{
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+    }
+}
+
+#map {
+    width: 30%;
+    height: 30%;
+    justify-content: center;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    iframe{
+        border: 1px solid color.$colorMainHover;
+        border-radius: 5%;
+        -webkit-border-radius: 5%;
+        -moz-border-radius: 5%;
+        -ms-border-radius: 5%;
+        -o-border-radius: 5%;
+        margin: 10%;
+    }
+}
+
+#legals{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
     color: white;
+    a{
+        text-decoration: none;
+        color: white;
+
+    }
 }
 
+#remontada{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    z-index: 100;
+    i{
+        border: 1px solid color.$colorMainHover;
+        color: white;
+        font-size: 2rem;
+        display: flex;
+        height: 48px;
+        width: 48px;
+        align-items: center;
+        justify-content: center;
+        background-color: color.$colorMain;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
 
-
-
-
-
-
-
-
-
-
-.footer {
-    background-color: #AC5B38;
+        &:hover{
+            background-color: color.$colorMainHover ;
+            box-shadow: 0 0 20px 2px color.$colorMainHover ;
+        }
+}
 }
