@@ -33,6 +33,9 @@
   font-weight: 400;
   src: url("../Fonts/risque-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* ================= */
+/* === Variables === */
+/* ================= */
 /* ================== */
 /* === Généralité === */
 /* ================== */
@@ -66,7 +69,7 @@ a {
 #catch {
   display: flex;
   position: fixed;
-  right: 10%;
+  right: 8%;
   align-items: right;
   justify-content: end;
   text-shadow: 1px 1px black;
@@ -80,7 +83,7 @@ a {
   -o-border-radius: 0 0 12px 12px;
   justify-content: end;
   align-items: start;
-  background-color: rgba(19, 22, 104, 0.22);
+  background-color: #3f405d;
   display: flex;
   padding: 4px 8px;
   margin: 0 24px 0 0px;
@@ -90,13 +93,14 @@ a {
   padding-right: 4px;
 }
 #catch p .num:hover {
-  text-shadow: 0 0 20px rgb(183, 132, 38);
+  text-shadow: 2px 2px 2px rgb(183, 132, 38);
+  color: white;
 }
 
 #head {
   display: flex;
   font-family: "Risque";
-  background-color: rgb(63, 64, 93);
+  background-color: #3f405d;
   text-shadow: 1px 1px black;
   padding: 24px 0 24px 0;
   justify-content: space-evenly;
@@ -117,6 +121,10 @@ a {
   display: none;
 }
 #head ul a {
+  color: white;
+}
+#head ul a:hover {
+  text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
 }
 
@@ -179,12 +187,17 @@ a {
   text-align: center;
   margin-bottom: 16px;
 }
+#sliders a:hover {
+  text-shadow: 2px 2px 2px rgb(183, 132, 38);
+  color: white;
+}
 #sliders slider1, #sliders slider2 {
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+  width: 50%;
 }
 #sliders #wrapper {
   height: 480px;
@@ -239,12 +252,19 @@ a {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+  border: 1px solid rgba(183, 133, 38, 0.639);
 }
 
 #presentation {
   background-color: rgba(183, 133, 38, 0.11);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
+  min-height: 480px;
   width: 100%;
+  padding-left: 24px;
   overflow: scroll;
   max-height: 480px;
   border-radius: 24px;
@@ -252,6 +272,7 @@ a {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+  border: 1px solid rgba(183, 133, 38, 0.639);
 }
 #presentation p {
   color: white;
@@ -267,6 +288,8 @@ a {
 #googleReview {
   margin-top: 16px;
   padding-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 /* === Allskills === */
@@ -304,19 +327,97 @@ a {
 #allSkills #skill .skills img:hover {
   background-color: rgb(183, 132, 38);
   box-shadow: 0 0 20px 2px rgb(183, 132, 38);
+  color: white;
 }
 
 /* === Contact === */
+#contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  box-sizing: border-box;
+}
+#contact img {
+  max-height: 240px;
+}
+#contact h5 {
+  font-family: "Risque";
+  font-size: 2rem;
+  text-align: center;
+  padding: 8px;
+}
+#contact #phone {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(183, 133, 38, 0.639);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  background-color: rgba(183, 133, 38, 0.11);
+}
+#contact #phone img {
+  padding-left: 16px;
+  border-radius: 24px 24px 24px 0;
+  -webkit-border-radius: 24px 24px 24px 0;
+  -moz-border-radius: 24px 24px 24px 0;
+  -ms-border-radius: 24px 24px 24px 0;
+  -o-border-radius: 24px 24px 24px 0;
+}
+#contact #phone:hover {
+  background-color: rgb(183, 132, 38);
+  box-shadow: 0 0 20px 2px rgb(183, 132, 38);
+  color: white;
+}
+#contact #devis {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(183, 133, 38, 0.639);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  background-color: rgba(183, 133, 38, 0.11);
+}
+#contact #devis img {
+  padding-right: 16px;
+  border-radius: 24px 24px 0 24px;
+  -webkit-border-radius: 24px 24px 0 24px;
+  -moz-border-radius: 24px 24px 0 24px;
+  -ms-border-radius: 24px 24px 0 24px;
+  -o-border-radius: 24px 24px 0 24px;
+}
+#contact #devis:hover {
+  background-color: rgb(183, 132, 38);
+  box-shadow: 0 0 20px 2px rgb(183, 132, 38);
+  color: white;
+}
+
 /* ============= */
 /* === Footer == */
 /* ============= */
 #foot {
   font-family: "Platypi";
-  background-color: rgb(63, 64, 93);
+  background-color: #3f405d;
   text-shadow: 1px 1px black;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+  border-radius: 24px 24px 0 0;
+  -webkit-border-radius: 24px 24px 0 0;
+  -moz-border-radius: 24px 24px 0 0;
+  -ms-border-radius: 24px 24px 0 0;
+  -o-border-radius: 24px 24px 0 0;
 }
 
 #blockFoot {
@@ -433,6 +534,45 @@ a {
 #remontada i:hover {
   background-color: rgb(183, 132, 38);
   box-shadow: 0 0 20px 2px rgb(183, 132, 38);
+}
+
+/* =========================== */
+/* === Media queries 600px === */
+/* =========================== */
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav {
+    display: none;
+  }
+  .hiddenMobile {
+    display: none;
+  }
+  .hiddenDesk {
+    display: unset;
+  }
+  /* ============== */
+  /* === Header === */
+  /* ============== */
+  #catch {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    max-width: 100%;
+  }
+  /* ============= */
+  /* === Main ==== */
+  /* ============= */
+  /* === Slider === */
+  /* === Presentation === */
+  /* === Google Avis === */
+  /* === Allskills === */
+  /* === Contact === */
+  /* ============= */
+  /* === Footer == */
+  /* ============= */
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -27,10 +27,10 @@
 </head>
 <body>
     <div id="catch">
-        <p>SARL AL-Elec | 7 rue du Calvaire, 56130 MAZAN |  <em class = "num">06.65.34.27.95  </em> : Pour toutes urgences ou besoin de devis
+        <p class="hiddenMobile">SARL AL-Elec | 7 rue du Calvaire, 56130 MAZAN |  <em class = "num displayMobile">06.65.34.27.95  </em> : Pour toutes urgences ou besoin de devis
         </p>
     </div>
-    
+
     <header id="head">
             <div id="logo">
                 <img src="Images//Icones/Design_baniere.png" alt="logo">
@@ -39,11 +39,11 @@
             
             <nav id="navMain">
                 <ul>
-                    <li><a href="#" class="on">Accueil</a></li>
-                    <li><a href="#">Dépannage</a></li>
-                    <li><a href="#">Réalisation</a></li>
-                    <li><a href="#">Normes</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html" class="on hiddenMobile">Accueil</a></li>
+                    <li><a href="#" class="hiddenMobile">Dépannage</a></li>
+                    <li><a href="pages/realisation.html" class="hiddenMobile">Réalisation</a></li>
+                    <li><a href="#" class="hiddenMobile">Normes</a></li>
+                    <li><a href="pages/contact.html" class="hiddenMobile">Contact</a></li>
                     <li><a href="#"><i class="fa-solid fa-bars hiddenDesk"></i></a></li>
                 </ul>
             </nav>
@@ -53,57 +53,50 @@
         <section id="sliders">
             <h1>SARL Al-Elec</h1>
             <div id="wrapper">
-                <div class="slider-wrapper theme-default">
+                <div class="slider-wrapper theme-default ">
                     <div id="slider" class="nivoSlider">
                         <img src="Images/Photo/Tertiaire/eclairage_bar.jpg" alt="Photo d'éclairage de bar" data-transition="sliceDownRight" title="#htmlcaption1" />
                         <img src="Images/Photo/Tertiaire/eclairage_cybercafe.jpg" alt="Photo d'eclairage cybercafe" 
                         data-transition="sliceDownRight" title="#htmlcaption2"  />
                         <img src="Images/Photo/Tertiaire/restaurant.jpg" alt="Photo de restaurant" data-transition="sliceDownRight"  title="#htmlcaption3" />
-                        <img src="Images/Photo/Tertiaire/securite_centrale_alarme.jpg" data-transition="sliceDownRight" alt="Photo de dntrale d'alarme incendie" title="#htmlcaption4" title="#htmlcaption4"  />
+                        <img src="Images/Photo/Tertiaire/securite_centrale_alarme.jpg" data-transition="sliceDownRight" alt="Photo de dntrale d'alarme incendie" title="#htmlcaption4" />
                     </div>
                     
-                    <div id="slider2" class="nivoSlider">
+                    <div id="slider2" class="nivoSlider hiddenMobile">
                         <img src="Images/Photo/Domestique/interphonie.jpg" alt="Photo d'interphone" title="#htmlcaption5"  data-transition="sliceUpLeft"/>
                         <img src="Images/Photo/Domestique/led_sdb.jpg" alt="Photo Salle de Bain" title="#htmlcaption6"  data-transition="sliceUpLeft"/>
                         <img src="Images/Photo/Domestique/piscine.jpg" alt="Photo de piscine" data-transition="sliceUpLeft"
                         title="#htmlcaption7"  />
                         <img src="Images/Photo/Domestique/lustre.jpg" alt="Photo de lustre" title="#htmlcaption8" data-transition="sliceUpDownLeft"/>
                     </div>
+                    
                     <div id="htmlcaption1" class="nivo-html-caption">
-                        <a href="#">Réalisation de l'éclairage d'un bar</a>. 
+                        <a href="pages/realisation.html">Réalisation de l'éclairage d'un bar</a>. 
                     </div>
                     <div id="htmlcaption2" class="nivo-html-caption">
-                        <a href="#">Réalisation du cablement d'un cybercafé</a>. 
+                        <a href="pages/realisation.html">Réalisation du cablement d'un cybercafé</a>. 
                     </div>
                     <div id="htmlcaption3" class="nivo-html-caption">
-                        <a href="#">Réalisation des plafonniers d'un restaurant</a>. 
+                        <a href="pages/realisation.html">Réalisation des plafonniers d'un restaurant</a>. 
                     </div>
                     <div id="htmlcaption4" class="nivo-html-caption">
-                        <a href="#">Instalation d'une centrale d'alarme incendie</a>. 
+                        <a href="pages/realisation.html">Instalation d'une centrale d'alarme incendie</a>. 
                     </div>
                     <div id="htmlcaption5" class="nivo-html-caption">
-                        <a href="#">Pose & instalation d'interphone</a>. 
+                        <a href="pages/realisation.html">Pose & instalation d'interphone</a>. 
                     </div>
                     <div id="htmlcaption6" class="nivo-html-caption">
-                        <a href="#">Pose ruban LED dans une salle de bain</a>. 
+                        <a href="pages/realisation.html">Pose ruban LED dans une salle de bain</a>. 
                     </div>
                     <div id="htmlcaption7" class="nivo-html-caption">
-                        <a href="#">Réalisation de l'éclairage extérieur de piscine de particulier</a>. 
+                        <a href="pages/realisation.html">Réalisation de l'éclairage extérieur de piscine de particulier</a>. 
                     </div>
                     <div id="htmlcaption8" class="nivo-html-caption">
-                        <a href="#">Instalation d'un lustre</a>. 
+                        <a href="pages/realisation.html">Instalation d'un lustre</a>. 
                     </div>
                     
                 </div>
             </div>
-
-
-
-
-
-
-
-
 
         </section>
 
@@ -125,7 +118,7 @@
             </div>
         </section>
 
-        <section id="allSkills">
+        <section id="allSkills" class="hiddenMobile">
             <h4>Une envie particulière, nous avons les compétences :
             </h4>
             <div id="skill">
@@ -167,16 +160,16 @@
         </section>
 
         <article id="contact">
-            <div>
-                <h5></h5>
-                <img src="" alt="">
+            <div id="phone">
+                <h5>Une question ? <br> Un renseignement ? <br> N'hésitez pas et contactez nous !</h5>
+                <img src="Images/Article/top-view-chat-bubbles-with-telephone-receiver.jpg" alt="image d'une telephone avec des bulles de comics">
             </div>
-            <div>
-                <h5>Test</h5>
-                <img src="" alt="">
+            <div id="devis" class="hiddenMobile">
+                <img src="Images/Article/flat-lay-business-concept.jpg" alt="Image d'un carnet de rendez-vous">
+                <h5>Besoin d'un devis ? <br> Demandez le gratuitement !</h5>
             </div>
         </article>
-        lorem1800
+        
     </main>
 
     <footer id="foot">
@@ -198,7 +191,7 @@
                     attal.alex@gmail.com
                 </p>
             </div>
-            <div id="map">
+            <div id="map" class="hiddenMobile">
                 <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-2.351760864257813%2C47.48635299289373%2C-2.2904777526855473%2C47.59180955803043&amp;layer=mapnik&amp;marker=47.53910778958013%2C-2.3212051391601562" style="border: 1px solid black"></iframe>
             </div>
         </div>

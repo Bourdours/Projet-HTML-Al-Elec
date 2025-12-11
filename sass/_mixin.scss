@@ -1,0 +1,13 @@
+@use "color";
+
+
+@mixin Hover {
+    background-color: color.$colorMainHover;
+    box-shadow: 0 0 20px 2px color.$colorMainHover;
+    color: white;
+}
+
+@mixin linkHover{
+    text-shadow: 2px 2px 2px color.$colorMainHover;
+    color: white;
+}

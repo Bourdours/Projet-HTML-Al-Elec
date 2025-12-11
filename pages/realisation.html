@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisation de Al-Elec</title>
+
+    
+    <!-- === Font & Icon === -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- === Nivo Slider === -->
+    <link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="screen" />
+    
+    <!-- === Database pour Leaflet === -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <!-- script pour avis google -->
+    <script defer async src='https://cdn.trustindex.io/loader.js?58e576d6015905670696c289990'></script>
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+    
+
+
+        <!-- === script pour la map leaflet === -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    </script>
+    <script>
+    var map = L.map('map').setView([47.538912721943134, -2.3212271067211763], 12);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    </script>
+    <!-- === scrpit pour nino slider === -->
+    <script type="text/javascript" src="../scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    $(window).load(function() {
+        $('#slider2').nivoSlider();
+    });
+    </script>
+
+</body>
+</html>
