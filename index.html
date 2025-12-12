@@ -26,27 +26,31 @@
 
 </head>
 <body>
-    <div id="catch">
-        <p class="hiddenMobile">SARL AL-Elec | 7 rue du Calvaire, 56130 MAZAN |  <em class = "num displayMobile">06.65.34.27.95  </em> : Pour toutes urgences ou besoin de devis
+    <div id="catch" class="target">
+        <p class="hiddenMobile">SARL AL-Elec | 7 rue du Calvaire, 56130 MAZAN |&nbsp;   <em class = "num displayMobile">06.65.34.27.95</em>&nbsp; : Pour toutes urgences ou besoin de devis
         </p>
     </div>
 
-    <header id="head">
+    <header id="head" class="trigger">
+        <div id="grpHead">
             <div id="logo">
                 <img src="Images//Icones/Design_baniere.png" alt="logo">
-                <p>SARL Al-Elec <br> Electricité Générale <br> 06 65 34 27 95</p>
+                <p>SARL&nbsp;Al-Elec <br> Electricité Générale <br> 06&nbsp;65&nbsp;34&nbsp;27&nbsp;95</p>
             </div>
             
             <nav id="navMain">
                 <ul>
-                    <li><a href="index.html" class="on hiddenMobile">Accueil</a></li>
-                    <li><a href="#" class="hiddenMobile">Dépannage</a></li>
-                    <li><a href="pages/realisation.html" class="hiddenMobile">Réalisation</a></li>
-                    <li><a href="#" class="hiddenMobile">Normes</a></li>
-                    <li><a href="pages/contact.html" class="hiddenMobile">Contact</a></li>
-                    <li><a href="#"><i class="fa-solid fa-bars hiddenDesk"></i></a></li>
+                    <li><a href="index.html" class="on">Accueil</a></li>
+                    <li><a href="#" class="">Dépannage</a></li>
+                    <li><a href="pages/realisation.html" class="">Réalisation</a></li>
+                    <li><a href="#" class="">Normes</a></li>
+                    <li><a href="pages/contact.html" class="">Contact</a></li>
                 </ul>
+                <div id="burger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </nav>
+        </div>
     </header>
     
     <main id="container">
@@ -161,12 +165,12 @@
 
         <article id="contact">
             <div id="phone">
-                <h5>Une question ? <br> Un renseignement ? <br> N'hésitez pas et contactez nous !</h5>
+                <h5>Une question&nbsp;? <br> Un&nbsp;renseignement&nbsp;? <br> N'hésitez pas et contactez nous !</h5>
                 <img src="Images/Article/top-view-chat-bubbles-with-telephone-receiver.jpg" alt="image d'une telephone avec des bulles de comics">
             </div>
             <div id="devis" class="hiddenMobile">
                 <img src="Images/Article/flat-lay-business-concept.jpg" alt="Image d'un carnet de rendez-vous">
-                <h5>Besoin d'un devis ? <br> Demandez le gratuitement !</h5>
+                <h5>Besoin d'un devis&nbsp;? <br> Demandez le gratuitement !</h5>
             </div>
         </article>
         
@@ -235,6 +239,28 @@
     $(window).load(function() {
         $('#slider2').nivoSlider();
     });
+    </script>
+    <!-- === script pour faire apparaitre le catch apres le header ===  -->
+    <script>
+        const trigger = document.querySelector('.trigger');
+        const fixedBox = document.getElementById('catch');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              fixedBox.classList.add('visible');  // section dépassée → montrer
+            } else {
+              fixedBox.classList.remove('visible'); // section visible → cacher
+            }
+          });
+        });
+
+        observer.observe(trigger); 
+    </script>
+    <script>
+        $("#head #grpHead #navMain #burger i").click(function(){
+        $("#head #grpHead #navMain ul").slideToggle(500);
+        });
     </script>
 
 </body>

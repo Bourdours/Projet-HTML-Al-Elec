@@ -48,8 +48,10 @@ a{
     justify-content: end;
     text-shadow: 1px 1px black;
     z-index: 100;
-
-
+    
+    opacity: 0;
+    pointer-events: none;
+    
     p{
         border-radius:0 0 12px 12px ;
         -webkit-border-radius:0 0 12px 12px ;
@@ -71,44 +73,53 @@ a{
         }
 }
 }
+#catch.visible{
+    opacity: 1;
+    pointer-events: auto;
+}
 
 
-#head {
-    display: flex;
-    font-family: fonts.$fontTittle;
+#head{
     background-color: color.$colorBanner;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#grpHead {
+    display: flex;
+    justify-content: space-between;
+    font-family: fonts.$fontTittle;
     text-shadow: 1px 1px black;
     padding: 24px 0 24px 0 ;
-    justify-content: space-evenly;
+    box-sizing: border-box;
     border-radius: 0 0 24px 24px;
     -webkit-border-radius: 0 0 24px 24px;
     -moz-border-radius: 0 0 24px 24px;
     -ms-border-radius: 0 0 24px 24px;
     -o-border-radius: 0 0 24px 24px;
     width: 100%;
-    ul{
-       display: flex;
-       justify-content: space-around;
-       align-items: end;
-       gap: 2rem;
-       .hiddenDesk{
-        display: none;
-       }
-       a{
-        color: white;
-        &:hover{
-            @include mixin.linkHover();
+    a{
+       padding-left: 16px;
+       color: white;
+       &:hover{
+           @include mixin.linkHover();
         }
-       }
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+    box-sizing: content-box;
     }
 }
 
+
 #logo {
-    width: 15%;
+    width: 50%;
     display: flex;
     font-family: fonts.$fontMajor;
     font-size: 1.8rem;
-    margin-left: 10%;
+    box-sizing: border-box;
     img {
         border: 1px solid color.$colorMainHover;
         max-width: 192px;
@@ -119,24 +130,32 @@ a{
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
         margin-right: 16px;
+        box-sizing: content-box;
     }
     p{
+        width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: start;
+        box-sizing: content-box;
     }
 }
 
 #navMain{
-    width: 65%;
-    margin-right: 10%;
+    width: 50%;
     font-size: 2rem;
     align-items: end;
+    justify-items: end;
     justify-content: end;
+    justify-self: end;
     display: flex;
+    box-sizing: content-box;
     .on{
         font-size: 3rem;
         text-decoration: underline;
+    }
+    #burger{
+        display: none;
     }
 }
 
@@ -145,10 +164,10 @@ a{
 /* ============= */
 
 #container{
-    margin-left: 10%;
-    margin-right: 10%;
-    max-width: 1600px;
+    
     width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* === Slider === */
@@ -172,18 +191,19 @@ a{
         -moz-border-radius: 24px;
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
-        width: 50%;
     }
     
     #wrapper{
         height: 480px;
         overflow: hidden;
         min-width: 100% ;
+        
         .slider-wrapper{
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 50%;
+            min-width: 45%;
+            gap: 16px;
             .nivoSlider{
                 border: 1px solid color.$colorMain;
                 border-radius: 24px;
@@ -199,6 +219,20 @@ a{
         }
     }
 }
+    body{
+        width: 100%;
+        #container{
+            #sliders{
+                #wrapper{
+                    .slider-wrapper.theme-default{
+                        .nivo-controlNav{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
 /* === Presentation === */
 
@@ -241,9 +275,7 @@ a{
     background-color: color.$colorBack;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100%;
     min-height: 480px;
     width: 100%;
     padding-left: 24px;
@@ -270,20 +302,22 @@ a{
 /* === Google Avis === */
 
 #googleReview{
-    margin-top: 16px;
+
     padding-top: 16px;
-    margin-bottom: 16px;
+    
     padding-bottom: 16px;
 }
 
 /* === Allskills === */
 
 #allSkills{
-    text-align: center;
+
     margin-top: 16px;
     margin-bottom: 16px;
 
     h4{
+        text-align: center;
+        box-sizing: content-box;
         font-size: 3rem;
         font-family: fonts.$fontTittle;
         margin-bottom: 16px;
@@ -320,24 +354,27 @@ a{
 #contact{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 48px;   
     margin-bottom: 16px; 
     margin-top: 16px;
     box-sizing: border-box;
+    gap: 16px;
     img{
-        max-height: 240px;
+        max-height: 320px;
     }
     h5{
         font-family: fonts.$fontTittle;
         font-size: 2rem;
         text-align: center;
-        padding: 8px;
+        padding: 16px;
+        width: 70%;
+        box-sizing: content-box;
 
     }
     #phone{
-        width: 50%;
+        height: 280px;
+        width: 48%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -348,8 +385,11 @@ a{
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
         background-color: color.$colorBack;
+
         img{
-            padding-left: 16px;
+            height: 280px;
+            width: 50%;
+            min-width: 200px;
             border-radius: 24px 24px 24px 0;
             -webkit-border-radius: 24px 24px 24px 0;
             -moz-border-radius: 24px 24px 24px 0;
@@ -362,7 +402,7 @@ a{
     }
 
     #devis{
-        width: 50%;
+        width: 48%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -374,7 +414,9 @@ a{
         -o-border-radius: 24px;
         background-color: color.$colorBack;
         img{
-            padding-right: 16px;
+            height: 280px;
+            width: 50%;
+            min-width: 200px;
             border-radius: 24px 24px 0 24px;
             -webkit-border-radius: 24px 24px 0 24px;
             -moz-border-radius: 24px 24px 0 24px;
@@ -408,12 +450,12 @@ a{
 
 #blockFoot{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding-top: 8px;
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
     height: 90%;
     box-sizing: border-box;
 }
@@ -527,43 +569,61 @@ a{
 }
 
 
-/* =========================== */
-/* === Media queries 600px === */
-/* =========================== */
+/* =================================== */
+/* === Media queries Index : 600px === */
+/* =================================== */
 
 @media screen and (max-width: 600px){
-    body{
-        width: 100%;
-        #container{
-            #sliders{
-                #wrapper{
-                    .slider-wrapper.theme-default{
-                        .nivo-controlNav{
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
     .hiddenMobile{
         display: none;
     }
-    .hiddenDesk{
-        display: unset;
-    }
-
 
     /* ============== */
     /* === Header === */
     /* ============== */
 
     #catch{
-        font-size: 1rem;
-        padding: 0;
-        margin: 0;
+        right: 0;
         position: fixed;
-        max-width: 100%;
+        .num{
+            font-size: 1.5rem;
+            align-items:center ;
+        }
+        p{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    #logo {
+        img{
+            width: 128px;
+            height: 128px;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    #head{
+        #grpHead{
+            #navMain{
+                #burger{
+                    display: block;
+                    padding-left: 8px;
+                }
+                ul{
+                    width: 50%;
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    li:hover{
+                        @include mixin.linkHover();
+                    }
+
+                }
+            }
+        }
     }
 
     /* ============= */
@@ -579,10 +639,57 @@ a{
     /* === Allskills === */
 
     /* === Contact === */
+        #contact {
+            #phone {
+                display: none;
+            }
+            #devis{
+                flex-direction: column;
+                width: 100%;
+                font-size: 2rem;
+                img{
+                    width: 100%;
+                }
+                h5{
+                    width: 100%;
 
+                }
+            }
+        }
+ 
     /* ============= */
     /* === Footer == */
     /* ============= */
 
+        #blockFoot{
+            flex-direction: column;
+            #enterprise{
+                width: 100%;
+                img{
+                    height: 96px;
+                    width: 96px;
+                }
+                h6{
+                    font-size: 1rem;
+                }
+            }
+            #infos{
+                width: 100%;
+                padding-bottom: 8px;
+                p{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
 
+            }
+        }
+
+        #remontada{
+            i{
+                height: 32px;
+                width: 32px;
+                font-size: 1rem;
+            }
+        }
 }
