@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Bourdours/a#readme",
   "dependencies": {
+    "lightbox2": "^2.11.5",
     "sass": "^1.94.2"
   }
 }
