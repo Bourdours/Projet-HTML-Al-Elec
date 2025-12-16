@@ -16,6 +16,9 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: color.$colorBody ;
@@ -83,6 +86,11 @@ a{
     background-color: color.$colorBanner;
     padding-left: 10%;
     padding-right: 10%;
+    border-radius: 0 0 24px 24px;
+    -webkit-border-radius: 0 0 24px 24px;
+    -moz-border-radius: 0 0 24px 24px;
+    -ms-border-radius: 0 0 24px 24px;
+    -o-border-radius: 0 0 24px 24px;
 }
 
 #grpHead {
@@ -151,7 +159,7 @@ a{
     display: flex;
     box-sizing: content-box;
     .on{
-        font-size: 3rem;
+        font-size: 2rem;
         text-decoration: underline;
     }
     #burger{
@@ -372,6 +380,12 @@ a{
         box-sizing: content-box;
 
     }
+    a{
+        color: #fff;
+        &:hover{
+            @include mixin.linkHover;
+        }
+    }
     #phone{
         height: 280px;
         width: 48%;
@@ -385,7 +399,6 @@ a{
         -ms-border-radius: 24px;
         -o-border-radius: 24px;
         background-color: color.$colorBack;
-
         img{
             height: 280px;
             width: 50%;
@@ -527,7 +540,7 @@ a{
     }
 }
 
-#legals{
+#footLegals{
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -618,7 +631,7 @@ a{
                 ul{
                     width: 50%;
                     font-size: 1rem;
-                    display: flex;
+                    display: none;
                     flex-direction: column;
                     li:hover{
                         @include mixin.linkHover();
@@ -759,5 +772,185 @@ a{
                 display: none;
             }
         }
+    }
+}
+
+
+/* ======||======= */
+/* === Contact === */
+/* ======||======= */
+
+#form{
+    width: 80%;
+    margin: 16px 10%;
+    background-color: color.$colorMain;
+    border: 1px solid color.$colorMainHover;
+    padding: 20px 25px;
+    text-shadow: 1px 1px #000000;
+    color: #fff;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+    h2{
+        font-size: 18px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+        
+        label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+        .required {
+            color: red;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #bbb;
+            font-size: 13px;
+            box-sizing: border-box;
+        }
+        .preview {
+            display: flex;
+            gap: 8px;
+            .preview input {
+                flex: 1;
+            }
+        }
+        .help-text {
+            font-size: 11px;
+            margin-top: 3px;
+        }
+        .checkbox-group label {
+            display: block;
+            font-size: 13px;
+        }
+        
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+    }
+
+    .buttons {
+        margin-top: 15px;
+    }
+
+    button {
+        background: color.$colorBanner;
+        color: #fff;
+        border: 1px solid color.$colorBanner;
+        padding: 6px 14px;
+        font-size: 13px;
+        cursor: pointer;
+        border-radius: 2px;
+        button[type="reset"] {
+            margin-left: 10px;
+        }
+        &:hover {
+            @include mixin.Hover;
+        }
+    }
+}
+
+/* ========================================= */
+/* === Media queries Realisation : 600px === */
+/* ========================================= */
+
+@media screen and (max-width: 600px){
+    #form{
+
+    }
+}
+
+/* ======||======= */
+/* === Légales === */
+/* ======||======= */
+
+
+#legals {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #000000;
+    #alEnt{
+        font-size: 2rem;
+        color: #fff;
+    }
+    
+    div{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        width: 100%;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+        h1{
+            color: color.$colorMain;
+            margin-bottom: 8px;
+        }
+        p{
+            background-color: color.$colorMain;
+            border-radius: 24px;
+            -webkit-border-radius: 24px;
+            -moz-border-radius: 24px;
+            -ms-border-radius: 24px;
+            -o-border-radius: 24px;
+            padding: 8px;
+            border: solid color.$colorMain;
+            color: #fff;
+        
+
+}
+    }
+}
+
+#plan{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 2rem;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    a{
+        color: #fff;
+        white-space: nowrap;
+        padding: 5%;
+        &:hover{
+            @include mixin.linkHover;
+        }
+    }
+    .plan{
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+        background-color: color.$colorMain;
+        border: solid color.$colorMain;
+        box-sizing: border-box;
+        padding-left: 4%;
+        min-width: 296px;
+    }
+    .liens{
+        padding-left: 8%;
     }
 }
