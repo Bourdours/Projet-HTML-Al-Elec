@@ -905,4 +905,39 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
   padding-left: 8%;
 }
 
+/* ======||======= */
+/* === Normes ==== */
+/* ======||======= */
+#blog {
+  margin: 30px auto;
+  padding: 0 10% 0 10%;
+}
+#blog .post {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+#blog .post h2 {
+  margin-top: 0;
+}
+#blog .post a {
+  text-decoration: underline rgb(183, 132, 38);
+  color: #3f405d;
+}
+#blog .post a:hover {
+  text-shadow: 2px 2px 2px rgb(183, 132, 38);
+  color: white;
+  color: #3f405d;
+}
+#blog .post ul {
+  list-style-type: disc;
+  padding-left: 5%;
+}
+#blog .date {
+  color: #777;
+  font-size: 0.9em;
+}
+
 /*# sourceMappingURL=style.css.map */

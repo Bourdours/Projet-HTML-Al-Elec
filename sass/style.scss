@@ -954,3 +954,38 @@ a{
         padding-left: 8%;
     }
 }
+
+/* ======||======= */
+/* === Normes ==== */
+/* ======||======= */
+
+#blog {
+    margin: 30px auto;
+    padding: 0 10% 0 10%;
+    .post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    h2 {
+    margin-top: 0;
+    }
+    a{
+        text-decoration: underline color.$colorMainHover;
+        color: color.$colorBanner;
+        &:hover{
+            @include mixin.linkHover;
+            color: color.$colorBanner;
+        }
+    }
+    ul {
+        list-style-type:disc ;
+        padding-left: 5%;
+    }
+    }
+    .date {
+    color: #777;
+    font-size: 0.9em;
+    }
+}
