@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'erreur</title>
+
+    
+    <!-- === Font & Icon === -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- === Nivo Slider === -->
+    <link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../css/nivo-slider.css" type="text/css" media="screen" />
+    
+    <!-- === Database pour Leaflet === -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <!-- script pour avis google -->
+    <script defer async src='https://cdn.trustindex.io/loader.js?58e576d6015905670696c289990'></script>
+
+    <!-- === lightbox === -->
+    <link href="../node_modules/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
+
+    <!-- === CSS === -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    
+
+</head>
+<body>
+
+    <main id="errorPage">
+        <div id="errorMain">
+            <img src="../Images/images/patate_erreur.png" alt="Image d'une patate" class="potatoe">
+            <h1>
+                Uh-Oh, on dirait que votre page ne s'est pas encore bien alimentez..
+            </h1>
+            <p>
+                Rafraichissez la page, et si le problème continu, <a href="../index.html">cliquez ICI</a> pour retourner à la page d'accueil !
+            </p>
+        </div>
+    </main>
+    
+
+
+        <!-- === script pour la map leaflet === -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    </script>
+    <script>
+    var map = L.map('map').setView([47.538912721943134, -2.3212271067211763], 12);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    </script>
+    <!-- === scrpit pour nino slider === -->
+    <script type="text/javascript" src="../scripts/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    $(window).load(function() {
+        $('#slider2').nivoSlider();
+    });
+    </script>
+
+        <!-- === script pour faire apparaitre le catch apres le header ===  -->
+    <script>
+        const trigger = document.querySelector('.trigger');
+        const fixedBox = document.getElementById('catch');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              fixedBox.classList.add('visible');  // section dépassée → montrer
+            } else {
+              fixedBox.classList.remove('visible'); // section visible → cacher
+            }
+          });
+        });
+
+        observer.observe(trigger); 
+    </script>
+
+        <!-- === script pour le burger === -->
+    <script>
+        $("#head #grpHead #navMain #burger i").click(function(){
+        $("#head #grpHead #navMain ul").slideToggle(500);
+        });
+    </script>
+
+    <!-- === script lightbox === -->
+    <script src="../node_modules/lightbox2/dist/js/lightbox.js"></script>
+
+</body>
+</html>

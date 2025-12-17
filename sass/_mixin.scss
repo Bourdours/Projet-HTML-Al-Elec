@@ -10,4 +10,5 @@
 @mixin linkHover{
     text-shadow: 2px 2px 2px color.$colorMainHover;
     color: white;
+    cursor: pointer;
 }

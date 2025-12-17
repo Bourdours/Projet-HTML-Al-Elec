@@ -1,3 +1,44 @@
+/* ==================== */
+/* === Nomenclature === */
+/* ==================== */
+
+ /*  
+    Ligne 43 Variable
+
+    Ligne 51 Généralité
+
+    Ligne 82  page : Index
+        Ligne 86 Header
+        Ligne 214 Main
+        Ligne 490 Footer
+
+        Ligne 632 MediaQueries -600px
+
+    Ligne 758 page : Realisation
+        Ligne 761 Main
+        
+        Ligne 804 MediaQueries -600px
+            
+    Ligne 823 page : Contact
+        Ligne 826 Main
+            
+        Ligne 911 MediaQueries -600px    
+
+    Ligne 921 page : Légales
+        Ligne 925 Main
+
+    Ligne 1002 page : Normes
+        Ligne 1005 Main
+
+    Ligne 1038 page : 404
+        Ligne 1041 Main
+
+
+
+
+
+*/
+
 /* ================= */
 /* === Variables === */
 /* ================= */
@@ -41,7 +82,9 @@ a{
 /* === Index === */
 /* ======||===== */
 
+/* ============== */
 /* === Header === */
+/* ============== */
 
 #catch {
     display: flex;
@@ -864,9 +907,9 @@ a{
     }
 }
 
-/* ========================================= */
-/* === Media queries Realisation : 600px === */
-/* ========================================= */
+/* ===================================== */
+/* === Media queries Contact : 600px === */
+/* ===================================== */
 
 @media screen and (max-width: 600px){
     #form{
@@ -988,4 +1031,70 @@ a{
     color: #777;
     font-size: 0.9em;
     }
+}
+
+
+/* ===||======= */
+/* === 404 ==== */
+/* ===||======= */
+
+#errorPage{
+    padding: 4% 10%;
+    #errorMain{
+        border: 10px solid color.$colorMainHover;
+        background: no-repeat left border-box url(../Images/Icones/laughter.png) ;
+        background-size: contain;
+        background-color: color.$colorMain;
+        border-radius: 24px;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 1px 1px color.$colorMainHover;
+        .potatoe{
+              transition: width 2s, height 2s, background-color 2s,transform 2s;
+              -webkit-transition: width 2s, height 2s, background-color 2s,transform 2s;
+              -moz-transition: width 2s, height 2s, background-color 2s,transform 2s;
+              -ms-transition: width 2s, height 2s, background-color 2s,transform 2s;
+              -o-transition: width 2s, height 2s, background-color 2s,transform 2s;
+}
+        .potatoe:hover{
+            transform: rotate(8turn);
+            -webkit-transform: rotate(8turn);
+            -moz-transform: rotate(8turn);
+            -ms-transform: rotate(8turn);
+            -o-transform: rotate(8turn);
+}
+    }
+    h1{
+        text-align: center;
+        padding-bottom: 2%;
+        font-size: 3rem;
+    }
+    img{
+        height: 50%;
+        width: 50%;
+        padding-bottom: 2%;
+        position: relative;
+        left: 25%;
+    }
+    p{
+        font-size: 2rem;
+        a{
+            color: color.$colorBanner;
+            &:hover{
+                @include mixin.linkHover;
+                color: color.$colorMainHover;
+            }
+        }
+    }
+
 }

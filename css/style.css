@@ -1,4 +1,43 @@
 @charset "UTF-8";
+/* ==================== */
+/* === Nomenclature === */
+/* ==================== */
+/*  
+    Ligne 43 Variable
+
+    Ligne 51 Généralité
+
+    Ligne 82  page : Index
+        Ligne 86 Header
+        Ligne 214 Main
+        Ligne 490 Footer
+
+        Ligne 632 MediaQueries -600px
+
+    Ligne 758 page : Realisation
+        Ligne 761 Main
+
+        Ligne 804 MediaQueries -600px
+
+    Ligne 823 page : Contact
+        Ligne 826 Main
+
+        Ligne 911 MediaQueries -600px    
+
+    Ligne 921 page : Légales
+        Ligne 925 Main
+
+    Ligne 1002 page : Normes
+        Ligne 1005 Main
+
+    Ligne 1038 page : 404
+        Ligne 1041 Main
+
+
+
+
+
+*/
 /* ================= */
 /* === Variables === */
 /* ================= */
@@ -33,6 +72,45 @@
   font-weight: 400;
   src: url("../Fonts/risque-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+/* ==================== */
+/* === Nomenclature === */
+/* ==================== */
+/*  
+    Ligne 43 Variable
+
+    Ligne 51 Généralité
+
+    Ligne 82  page : Index
+        Ligne 86 Header
+        Ligne 214 Main
+        Ligne 490 Footer
+
+        Ligne 632 MediaQueries -600px
+
+    Ligne 758 page : Realisation
+        Ligne 761 Main
+
+        Ligne 804 MediaQueries -600px
+
+    Ligne 823 page : Contact
+        Ligne 826 Main
+
+        Ligne 911 MediaQueries -600px    
+
+    Ligne 921 page : Légales
+        Ligne 925 Main
+
+    Ligne 1002 page : Normes
+        Ligne 1005 Main
+
+    Ligne 1038 page : 404
+        Ligne 1041 Main
+
+
+
+
+
+*/
 /* ================= */
 /* === Variables === */
 /* ================= */
@@ -69,7 +147,9 @@ a {
 /* ======||===== */
 /* === Index === */
 /* ======||===== */
+/* ============== */
 /* === Header === */
+/* ============== */
 #catch {
   display: flex;
   position: fixed;
@@ -101,6 +181,7 @@ a {
 #catch p .num:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 
 #catch.visible {
@@ -140,6 +221,7 @@ a {
 #grpHead a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 #grpHead ul {
   display: flex;
@@ -217,6 +299,7 @@ a {
 #sliders a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 #sliders slider1, #sliders slider2 {
   border-radius: 24px;
@@ -389,6 +472,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
 #contact a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 #contact #phone {
   height: 280px;
@@ -556,6 +640,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
 #footLegals a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 
 #remontada {
@@ -628,6 +713,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
   #head #grpHead #navMain ul li:hover {
     text-shadow: 2px 2px 2px rgb(183, 132, 38);
     color: white;
+    cursor: pointer;
   }
   /* ============= */
   /* === Main ==== */
@@ -825,9 +911,9 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
   color: white;
 }
 
-/* ========================================= */
-/* === Media queries Realisation : 600px === */
-/* ========================================= */
+/* ===================================== */
+/* === Media queries Contact : 600px === */
+/* ===================================== */
 /* ======||======= */
 /* === Légales === */
 /* ======||======= */
@@ -888,6 +974,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
 #plan a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
 }
 #plan .plan {
   border-radius: 24px;
@@ -929,6 +1016,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
 #blog .post a:hover {
   text-shadow: 2px 2px 2px rgb(183, 132, 38);
   color: white;
+  cursor: pointer;
   color: #3f405d;
 }
 #blog .post ul {
@@ -938,6 +1026,71 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
 #blog .date {
   color: #777;
   font-size: 0.9em;
+}
+
+/* ===||======= */
+/* === 404 ==== */
+/* ===||======= */
+#errorPage {
+  padding: 4% 10%;
+}
+#errorPage #errorMain {
+  border: 10px solid rgb(183, 132, 38);
+  background: no-repeat left border-box url(../Images/Icones/laughter.png);
+  background-size: contain;
+  background-color: rgba(183, 133, 38, 0.639);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 1px 1px rgb(183, 132, 38);
+}
+#errorPage #errorMain .potatoe {
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+  -webkit-transition: width 2s, height 2s, background-color 2s, transform 2s;
+  -moz-transition: width 2s, height 2s, background-color 2s, transform 2s;
+  -ms-transition: width 2s, height 2s, background-color 2s, transform 2s;
+  -o-transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+#errorPage #errorMain .potatoe:hover {
+  transform: rotate(8turn);
+  -webkit-transform: rotate(8turn);
+  -moz-transform: rotate(8turn);
+  -ms-transform: rotate(8turn);
+  -o-transform: rotate(8turn);
+}
+#errorPage h1 {
+  text-align: center;
+  padding-bottom: 2%;
+  font-size: 3rem;
+}
+#errorPage img {
+  height: 50%;
+  width: 50%;
+  padding-bottom: 2%;
+  position: relative;
+  left: 25%;
+}
+#errorPage p {
+  font-size: 2rem;
+}
+#errorPage p a {
+  color: #3f405d;
+}
+#errorPage p a:hover {
+  text-shadow: 2px 2px 2px rgb(183, 132, 38);
+  color: white;
+  cursor: pointer;
+  color: rgb(183, 132, 38);
 }
 
 /*# sourceMappingURL=style.css.map */
