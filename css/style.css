@@ -128,7 +128,7 @@ html {
 }
 
 body {
-  background-color: #504e44;
+  background-color: rgb(80, 78, 68);
   color: rgba(183, 133, 38, 0.639);
   text-shadow: 1px 1px black;
   font-family: "Platypi";
@@ -252,7 +252,7 @@ a {
 #logo p {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   box-sizing: content-box;
 }
@@ -990,6 +990,7 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
   box-sizing: border-box;
   padding-left: 4%;
   min-width: 296px;
+  padding-right: 8%;
 }
 #plan .liens {
   padding-left: 8%;

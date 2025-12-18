@@ -186,7 +186,7 @@ a{
     p{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: start;
         box-sizing: content-box;
     }
@@ -995,6 +995,7 @@ a{
         box-sizing: border-box;
         padding-left: 4%;
         min-width: 296px;
+        padding-right: 8%;
     }
     .liens{
         padding-left: 8%;
