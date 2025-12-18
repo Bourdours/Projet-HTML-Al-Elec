@@ -889,6 +889,10 @@ body #container #sliders #wrapper .slider-wrapper.theme-default .nivo-controlNav
   display: block;
   font-size: 13px;
 }
+#form .form-group .civilite {
+  display: flex;
+  justify-content: space-evenly;
+}
 #form .form-group textarea {
   height: 100px;
   resize: vertical;

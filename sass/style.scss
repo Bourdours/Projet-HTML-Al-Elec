@@ -882,7 +882,10 @@ a{
             display: block;
             font-size: 13px;
         }
-        
+        .civilite{
+            display: flex;
+            justify-content: space-evenly;
+        }
         textarea {
             height: 100px;
             resize: vertical;
